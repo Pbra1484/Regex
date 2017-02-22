@@ -17,6 +17,7 @@ public class RegexFrame extends JFrame
 		this.baseController = baseController;
 		this.appPanel = new RegexPanel();
 		
+		
 		setupFrame();
 	}
 	
