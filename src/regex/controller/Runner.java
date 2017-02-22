@@ -4,7 +4,7 @@ public class Runner
 {
 	public static void main(String [] args)
 	{
-		RegexController app = new RegexCotroller();
+		RegexController app = new RegexController();
 		app.start();
 	}
 
