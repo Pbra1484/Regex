@@ -30,14 +30,15 @@ public class RegexPanel extends JPanel
 		this.baseController = baseController;
 		baseLayout = new SpringLayout();
 		fName = new JTextField(30);
-		lName = new JTextField(40);
+		lName = new JTextField(30);
 		pNumber = new JTextField(10);
-		eMail = new JTextField(20);
+		eMail = new JTextField(30);
 		fNameL = new JLabel("First Name");
 		lNameL = new JLabel("Last Name");
 		pNumberL = new JLabel("Phone Number");
-		eMailL = new JLabel("eMail");
+		eMailL = new JLabel("EmAiL");
 		inputButton = new JButton("input");
+		
 		
 		setupPanel();
 		setupLayout();
@@ -61,7 +62,24 @@ public class RegexPanel extends JPanel
 	
 	private void setupLayout()
 	{
-		
+		baseLayout.putConstraint(SpringLayout.WEST, fName, 10, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.WEST, lName, 0, SpringLayout.WEST, fName);
+		baseLayout.putConstraint(SpringLayout.WEST, pNumber, 0, SpringLayout.WEST, fName);
+		baseLayout.putConstraint(SpringLayout.WEST, eMail, 0, SpringLayout.WEST, fName);
+		baseLayout.putConstraint(SpringLayout.WEST, fNameL, 10, SpringLayout.WEST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, fName, 6, SpringLayout.SOUTH, fNameL);
+		baseLayout.putConstraint(SpringLayout.NORTH, fNameL, 10, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, lName, 6, SpringLayout.SOUTH, lNameL);
+		baseLayout.putConstraint(SpringLayout.NORTH, lNameL, 6, SpringLayout.SOUTH, fName);
+		baseLayout.putConstraint(SpringLayout.WEST, lNameL, 0, SpringLayout.WEST, fName);
+		baseLayout.putConstraint(SpringLayout.NORTH, pNumber, 6, SpringLayout.SOUTH, pNumberL);
+		baseLayout.putConstraint(SpringLayout.NORTH, pNumberL, 6, SpringLayout.SOUTH, eMail);
+		baseLayout.putConstraint(SpringLayout.WEST, pNumberL, 0, SpringLayout.WEST, fName);
+		baseLayout.putConstraint(SpringLayout.NORTH, eMail, 6, SpringLayout.SOUTH, eMailL);
+		baseLayout.putConstraint(SpringLayout.NORTH, eMailL, 6, SpringLayout.SOUTH, lName);
+		baseLayout.putConstraint(SpringLayout.WEST, eMailL, 0, SpringLayout.WEST, fName);
+		baseLayout.putConstraint(SpringLayout.SOUTH, inputButton, -10, SpringLayout.SOUTH, this);
+		baseLayout.putConstraint(SpringLayout.EAST, inputButton, -10, SpringLayout.EAST, this);
 	}
 	
 	private void setupListeners()
