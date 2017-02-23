@@ -1,6 +1,7 @@
 package regex.controller;
 
 import regex.view.RegexFrame;
+import java.awt.color.*;
 
 
 public class RegexController 
@@ -17,5 +18,9 @@ public class RegexController
 		
 	}
 	
+	public Color testName()
+	{
+		
+	}
 
 }
