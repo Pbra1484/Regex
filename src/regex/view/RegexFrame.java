@@ -11,11 +11,11 @@ public class RegexFrame extends JFrame
 	
 	
 	
-	RegexFrame(RegexController baseController)
+	public RegexFrame(RegexController baseController)
 	{
 		super();
 		this.baseController = baseController;
-		this.appPanel = new RegexPanel();
+		this.appPanel = new RegexPanel(baseController);
 		
 		
 		setupFrame();

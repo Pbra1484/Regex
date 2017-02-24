@@ -24,7 +24,7 @@ public class RegexPanel extends JPanel
 	
 	
 	
-	RegexPanel(RegexController baseController)
+	public RegexPanel(RegexController baseController)
 	{
 		super();
 		this.baseController = baseController;
@@ -89,7 +89,10 @@ public class RegexPanel extends JPanel
 		{
 			public void actionPerformed(ActionEvent click)
 			{
-				
+				fName.setBackground(baseController.testFName(fName.getText()));
+				lName.setBackground(baseController.testLName(lName.getText()));
+				eMail.setBackground(baseController.testEmail(eMail.getText()));
+				pNumber.setBackground(baseController.testPNumber(pNumber.getText()));
 			}
 		});
 	}
